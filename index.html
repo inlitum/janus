@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Janus</title>
+        <link rel="stylesheet" href="css/style.css" class="style" />
+        <link href="assets/fontawesome/css/fontawesome.css" rel="stylesheet">
+        <link href="assets/fontawesome/css/solid.css" rel="stylesheet">
+    </head>
+    <body>
+        <div id="background">
+            <div id="bg-cover"></div>
+        </div>
+
+        <div id="foreground">
+            <div class="header">
+                <div class="card control">
+                    control
+                </div>
+            </div>
+            <div class="middle">
+                <div class="card login">
+                    <div class="row">
+                        <div class="title">login</div>
+                        <div class="dropdown pull-right">
+                            <button id="userDropdownButton" class="jenus-icon-button">
+                                <i class="user-dropdown-icon fa-solid fa-chevron-right"></i>
+                            </button>
+                            <div id="userDropdown" class="dropdown-content">
+                                <a href="#">Test</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <label for="username">username:</label>
+                        <input id="username" class="jenus-input" type="text" disabled>
+                    </div>
+                    <div class="form-row">
+                        <label for="password">password:</label>
+                        <input id="password" class="jenus-input" type="password">
+                    </div>
+                    <div class="last-row">
+                        <button class="jenus-button pull-right">login</button>
+                    </div>
+                </div>
+                <div class="card environments">
+                    environments
+                </div>
+            </div>
+            <div class="footer">
+                <div class="card something">
+                    something
+                </div>
+            </div>
+        </div>
+
+        <script src="js/index.js" type="module"></script>
+    </body>
+</html>

@@ -1,0 +1,14 @@
+{
+    "name": "janus",
+    "version": "1.0.0",
+    "dependencies": {
+        "@types/node": "^18.11.2",
+        "nody-greeter-types": "^1.0.7"
+    },
+    "scripts": {
+        "build": "tsc && sass ./scss/style.scss ./css/style.css"
+    },
+    "devDependencies": {
+        "@types/jquery": "^3.5.14"
+    }
+}

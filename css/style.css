@@ -1,0 +1,189 @@
+.row {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 1rem;
+}
+
+.form-row {
+  margin-bottom: 1rem;
+}
+
+.last-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.pull-right {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+html, body {
+  margin: 0;
+  height: 100%;
+  overflow-y: hidden;
+}
+
+html * {
+  font-family: "Ubuntu Mono", monospace;
+  font-size: 13px;
+}
+
+#background {
+  z-index: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+#background img {
+  width: inherit;
+  height: inherit;
+  object-fit: cover;
+  object-position: center;
+}
+
+#foreground {
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  position: absolute;
+  display: grid;
+  grid-template-rows: 100px 1fr 100px;
+}
+
+.jenus-icon-button, .jenus-button {
+  background: transparent;
+  color: #EBDBB2;
+  border: 1px solid #EBDBB2;
+}
+
+.jenus-icon-button:hover, .jenus-button:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.jenus-icon-button:active, .jenus-button:active {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.jenus-icon-button {
+  cursor: pointer;
+  height: 24px;
+  width: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.jenus-icon-button .fa-solid {
+  padding-top: 1px;
+}
+
+.jenus-button {
+  padding: 0.2rem 0.4rem;
+}
+
+.jenus-input {
+  background: transparent;
+  border: 1px solid #EBDBB2;
+  color: #EBDBB2;
+  padding: 0.2rem 0.5rem;
+}
+
+.jenus-input[disabled] {
+  border: 1px solid #B1A585;
+  color: #B1A585;
+}
+
+.jenus-input:focus {
+  outline: none;
+}
+
+.dropdown-active {
+  border-bottom: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background: #1B252F;
+  border: 1px solid #EBDBB2;
+  color: #EBDBB2;
+  min-width: 160px;
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  cursor: pointer;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {
+  display: block;
+}
+
+.card {
+  border: 1px solid #EBDBB2;
+  color: #EBDBB2;
+  background: #1B252F;
+  padding: 1rem;
+}
+
+.row {
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+}
+
+.control {
+  margin-top: 1rem;
+}
+
+.middle {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.login {
+  margin-left: 1rem;
+}
+
+.environments {
+  margin-left: auto;
+  margin-right: 1rem;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.something {
+  margin-bottom: 1rem;
+}
+
+/*# sourceMappingURL=style.css.map */
