@@ -14,8 +14,19 @@
 
         <div id="foreground">
             <div class="header">
-                <div class="card control">
-                    control
+                <div id="control" class="card control hidden">
+                    <button id="shutdown" class="jenus-icon-button" title="shutdown" type="button">
+                        <i class="fa-solid fa-power-off"></i>
+                    </button>
+                    <button id="restart" class="jenus-icon-button" title="restart" type="button">
+                        <i class="fa-solid fa-rotate-right"></i>
+                    </button>
+                    <button id="hibernate" class="jenus-icon-button" title="hibernate" type="button">
+                        <i class="fa-solid fa-moon"></i>
+                    </button>
+                    <button id="suspend" class="jenus-icon-button" title="suspend" type="button">
+                        <i class="fa-solid fa-circle-minus" ></i>
+                    </button>
                 </div>
             </div>
             <div class="middle">
@@ -34,21 +45,42 @@
                     <div class="form-row">
                         <label for="username">username:</label>
                         <input id="username" class="jenus-input" type="text" disabled>
+                        <div id="usernameError" class="input-error pull-text-right"></div>
                     </div>
                     <div class="form-row">
                         <label for="password">password:</label>
                         <input id="password" class="jenus-input" type="password">
+                        <div id="passwordError" class="input-error pull-text-right"></div>
+                        <div id="loginSuccess" class="input-success pull-text-right"></div>
                     </div>
                     <div class="last-row">
-                        <button class="jenus-button pull-right">login</button>
+                        <button id="loginSubmit" class="jenus-button pull-right">submit</button>
                     </div>
                 </div>
-                <div class="card environments">
-                    environments
+                <div class="card sessions">
+                    <div class="card-title">
+                        sessions
+                    </div>
+                    <div class="sessions-wrapper">
+                        <ul class="sessions-list">
+                            <li class="session-item">
+                                <input type="radio" id="i3" name="session" value="i3"/>
+                                <label for="i3">i3</label>
+                            </li>
+                            <li class="session-item">
+                                <input type="radio" id="awesome" name="session" value="awesome"/>
+                                <label for="awesome">awesome</label>
+                            </li>
+                            <li class="session-item">
+                                <input type="radio" id="ubuntu" name="session" value="ubuntu" checked="checked" />
+                                <label for="ubuntu">ubuntu</label>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
             <div class="footer">
-                <div class="card something">
+                <div class="card something hidden">
                     something
                 </div>
             </div>

@@ -14,6 +14,9 @@ export class Accounts {
         this.setAccountsList();
         this.setFirstAccount();
     }
+    getSelectedUser() {
+        return this._selectedUser ?? null;
+    }
     fetchFirstUser() {
         if (!this._users || this._users.length <= 0) {
             return;
@@ -61,6 +64,8 @@ export class Accounts {
     setFirstAccount() {
         if (this._usernameInput && this._selectedUser) {
             this._usernameInput.value = this._selectedUser.username;
+            if (window.sessions)
+                window.sessions.handleUserChange(this._selectedUser);
         }
     }
     initialiseElements() {
@@ -71,7 +76,6 @@ export class Accounts {
         }
         const userDropdown = document.querySelector('#userDropdown');
         if (userDropdown && userDropdown instanceof HTMLDivElement) {
-            console.log(userDropdown);
             this._userDropdown = userDropdown;
         }
         const userDropdownButton = document.querySelector('#userDropdownButton');

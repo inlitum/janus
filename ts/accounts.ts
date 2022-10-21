@@ -15,6 +15,10 @@ export class Accounts {
 
     private readonly defaultUserKey = 'defaultUser';
 
+    public getSelectedUser (): LightDMUser | null {
+        return this._selectedUser ?? null;
+    }
+
     private fetchFirstUser (): LightDMUser | undefined {
         if (!this._users || this._users.length <= 0) {
             return;
@@ -73,6 +77,7 @@ export class Accounts {
     private setFirstAccount (): void {
         if (this._usernameInput && this._selectedUser) {
             this._usernameInput.value = this._selectedUser.username;
+            if (window.sessions) window.sessions.handleUserChange(this._selectedUser);
         }
     }
 
@@ -85,7 +90,6 @@ export class Accounts {
 
         const userDropdown = document.querySelector('#userDropdown');
         if (userDropdown && userDropdown instanceof HTMLDivElement) {
-            console.log(userDropdown)
             this._userDropdown = userDropdown;
         }
 
@@ -150,7 +154,7 @@ export class Accounts {
         this._userDropdownButton.classList.toggle('dropdown-active');
     }
 
-    public switchUser(username: string) {
+    private switchUser(username: string) {
         if (username && username === '' || !this._users) {
             return;
         }
